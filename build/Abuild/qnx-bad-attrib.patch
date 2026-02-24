@@ -1,0 +1,31 @@
+diff --git a/zic.c b/zic.c
+index ef96efe..1982ff1 100644
+--- a/zic.c
++++ b/zic.c
+@@ -604,7 +604,7 @@ eat(int fnum, lineno num)
+ 	eats(fnum, num, 0, -1);
+ }
+ 
+-ATTRIBUTE_FORMAT((printf, 1, 0)) static void
++static void
+ verror(const char *const string, va_list args)
+ {
+ 	/*
+@@ -622,7 +622,7 @@ verror(const char *const string, va_list args)
+ 	fprintf(stderr, "\n");
+ }
+ 
+-ATTRIBUTE_FORMAT((printf, 1, 2)) static void
++static void
+ error(const char *const string, ...)
+ {
+ 	va_list args;
+@@ -632,7 +632,7 @@ error(const char *const string, ...)
+ 	errors = true;
+ }
+ 
+-ATTRIBUTE_FORMAT((printf, 1, 2)) static void
++static void
+ warning(const char *const string, ...)
+ {
+ 	va_list args;
